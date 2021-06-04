@@ -1,0 +1,106 @@
+ <html>
+
+ <head>
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+ </head>
+ <style>
+     .accordion {
+         color: #776842;
+         cursor: pointer;
+         padding: 18px;
+         width: 100%;
+         border: none;
+         border-top: 1px solid #6C7C6973;
+         text-align: left;
+        outline: none;
+        font-size: 18px;
+        transition: 0.4s;
+        font-weight: 800;
+        font-family: 'Alata', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1.23px;
+        background-color: rgb(255,255,255,0.0);
+         font-weight: 500;
+         border-radius: inherit;
+    }
+
+    .accordion:after {
+        color: #777;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+     .accordion:hover{background-color:rgb(255,255,255,0.0); }
+
+    .panel {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        font-size: 16px;
+        transition: max-height 0.2s ease-out;
+        font-family: 'Roboto', sans-serif;
+        line-height: 20px;
+        color: #54595f;
+    }
+
+    .accordion:after {
+        content: '\02795';
+        /* Unicode character for "plus" sign (+) */
+        font-size: 16px;
+        color: #777;
+        float: right;
+        margin-left: 5px;
+    }
+
+    .active:after {
+        content: "\2796";
+        /* Unicode character for "minus" sign (-) */
+    }
+</style>
+
+<body>
+   /*Herunder koder vi accordions med javascript til siden 'Om JossesKrea'*/
+    <button class="accordion">Hvor fik du ideen til JossesKre fra og hvordan startede du op?</button>
+    <div class="panel" style="margin-bottom: 10px;">
+        <p>Jeg har altid lavet mange kreative projekter i alle retninger, og så begyndte jeg egentlig bare at dele det på min Instagram. Jeg har altid haft en iværksætterdrøm, men har aldrig rigtig vidst hvad det skulle være. Jeg delte meget med det her børneunivers og begyndte at gå mere op i at tage pæne billeder, og så stak det ligesom bare af.</p>
+    </div>
+    <button class="accordion">Laver du tit projekter efter begivenheder som børnefødselsdage?</button>
+    <div class="panel" style="margin-bottom: 10px;">
+        <p>Ja det gør jeg helt sikkert, og jeg syntes især jeg bliver inspireret op til begivnheder som børnefødselsdage. Det er altid et kæmpe projekt for mig når mine børn har fødselsdag. Jeg elsker at se deres reaktion når jeg bare rammer det perfekte tema. Sidst der var børnefødselsdag i vores hjem var til min søns 5’års fødselsdag, og han blev så begejstret og glad, så det rør mig også helt vildt. </p>
+    </div>
+    <button class="accordion">Laver du tit kreative projekter med dine egne børn?</button>
+    <div class="panel" style="margin-bottom: 10px;">
+        <p>Jeg elsker at have mine børn med når jeg laver kreative projekter. Det er for mig helt fantastisk og se hvordan børn fordyber sig i projekterne og udfolder sig kreativt. Jeg tror helt sikkert at det giver børn meget at opleve det kreative univers, og så elsker jeg den her form for kvalitetstid vi har sammen helt upåvirket af noget andet.</p>
+    </div>
+    <button class="accordion">Kommer der flere projekter med temaer til børnefødselsdage?</button>
+    <div class="panel" style="margin-bottom: 10px;">
+        <p>Det gør der helt sikkert. Og temaerne kan man nemt gøre til sit eget eller bruge dele af det til almindelige fødselsdage. F.eks. har min mand snart fødselsdag, og her tænker jeg at man sagtens kan bruge ideen med tallene med balloner i. Der er altid plads til fri leg hos JossesKrea, og jeg håber bare at jeg kan være med til at inspirere jer.</p>
+    </div>
+</body>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+/*Herunder viser vi hvordan man laver en alertboks med javascript*/
+<script>
+		alert("Denne side og webshop er under opførsel. Ordrer vil ikke blive gennemført.");  // display string message
+    </script>
+
+</html>
